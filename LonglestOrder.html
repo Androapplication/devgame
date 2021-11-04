@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Moonly Article's</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="Bootstrap 5.1.3/css/bootstrap.min.css">
+    </head>
+    <style>
+        input[type=search] {
+            width: 200px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: rgb(255, 255, 255);
+            background-image: url('searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+        
+        input[type=search]:focus {
+            width: 100%;
+        }
+    </style>
+    <body style="background-image: url(WebsiteData/Images/BackgroundCover.jpg); background-size: cover; background-attachment: fixed; background-repeat: no-repeat;">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="Home.html"><img src="WebsiteData/Images/WebsiteLogo.png" alt="Website Logo" width="40" height="40" class="d-inline-block align-text-top">Moonly Article's</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Home.html">Postingan Populer</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">Daftar Postingan</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="LatestOrder.html">Postingan Terbaru</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="LonglestOrder.html">Postingan Terlama</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="About.html">Tentang Website</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="ContactUs.html">Hubungi Kami</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+        </header>
+        <div class="form-control">
+            <h5 class="lead fw-normal">telusuri postingan dengan mengetikan kata kunci</h5>
+            <input type="search" class="form-control" placeholder="telusuri disini">
+        </div>
+        <article class="mx-3">
+            <h3 class="fs-2" style="color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" id="latestArticle"><b>Mengurutkan Postingan Berdasarkan Postingan Terlama</b></h3>
+            <div class="card mb-3" style="max-width: 1000px; max-height: 700px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="WebsiteData/Images/PostImages/Post1-Header.jpg" alt="Cara membuka whatsapp di tablet android tanpa harus Log Out ponsel" class="img-fluid rounded-start p-1">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="Article/Post1.html">Cara membuka whatsapp di tablet android tanpa harus Log Out ponsel</a></h5>
+                            <p>Selama ini, aplikasi chatting WhatsApp cukup "sulit" digunakan di tablet, baik Android maupun iPad. Pasalnya, WhatsApp akan mendeteksi tablet dan iPad sebagai perangkat mobile, sebagaimana smartphone.</p>
+                            <p class="card-text"><small class="text-muted">Diposting pada 22/10/2021</small></p>
+                            <a class="btn btn-light btn-outline-primary" role="button" href="Article/Post1.html">Baca Postingan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 1000px; max-height: 700px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="WebsiteData/Images/PostImages/Post2-Header.jpg" alt="Windows 11 Akan Segera Hadir Secara Resmi!!Baca Persyaratannya" class="img-fluid rounded-start p-1">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="Article/Post2.html">Windows 11 Akan Segera Hadir Secara Resmi!!Baca Persyaratannya</a></h5>
+                            <p>Sistem operasi terbaru windows 11 kabarnya akan tersedia dengan peningkatan gratis untuk PC windows 10 yang memenuhi syarat, atau pada perangkat baru yang disertakan dengan windows 11</p>
+                            <p class="card-text"><small class="text-muted">Diposting pada 24/10/2021</small></p>
+                            <a class="btn btn-light btn-outline-primary" role="button" href="Article/Post2.html">Baca Postingan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="card text-center py-2">
+                <div class="card-body">
+                    <h5 class="card-title">Moonly Article's</h5>
+                    <p><small>Website Informasi CCIT FTUI</small></p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text lead">&copy; copyright 2021 | Moonly Article's</p>
+                </div>
+            </div>
+        </footer>
+        <script src="Bootstrap 5.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+            $("input").on("keyup",function(){
+                $("article .card .row").filter(function(){
+                    $(this).toggle($(this).text().toLowerCase().indexOf($("input").val().toLowerCase()) > -1);
+                })
+            });
+        </script>
+    </body>
+</html>
