@@ -144,40 +144,18 @@
             </nav>
         </header>
         <div class="container">
-            <section class="contact_us">
-                <div class="contact_us_description">
-                    <h2><span>Moonly</span> Article's</h2>
-                    <p>
-                        Jika anda memiliki sebuah saran,komentar,ataupun kritikan 
-                        yang dapat membantu proses perkembangan website Moonly Article's.<br>
-                        anda dapat mengirimkan pesan kepada kami selaku pengembang web melalui halaman ini.<br>
-                        atau anda dapat langsung menghubungi kami melalui nomor customer service yang disediakan.
-                    </p>
-                </div>
-                <div class="contact_us_container container-fluid">
-                    <form action="https://formspree.io/f/xjvjoplb" method="POST" id="my-form">
-                        <div class="form_group">
-                            <label for="firstname">Nama Depan</label>
-                            <input type="text" id="firstname" name="firstname" placeholder="Isikan Nama Depan">
-                        </div>
-                        <div class="form_group">
-                            <label for="lastname">Nama Belakang</label>
-                            <input type="text" id="lastname" name="lastname" placeholder="Isikan Nama Belakang">
-                        </div>
-                        <div class="form_group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Masukan Email Valid">
-                        </div>
-                        <div class="form_group">
-                            <label for="message">Pesan</label>
-                            <textarea name="message" id="message" cols="20" rows="7"></textarea>
-                        </div>
-        
-                        <button type="submit">Submit</button>
-                    </form>
-                </div>
-                <div id="status"></div>
-            </section>
+            <h1 class="text-light"> Data table </h1>
+			<table class="table table-bordered bg-light my-4" style="width:100%" cellpadding "10px"cellspacing="10px" border="1">
+				<thead>
+					<tr>
+						<th>No</th>
+						<th>Judul</th>
+						<th>Tanggal Upload</th>
+						<th>Uploader</th>
+					</tr>
+				</thead>
+				<tbody></tbody> <!---Placeholder--->
+			</table>
         </div>
         <footer>
             <div class="card text-center py-2">
@@ -192,5 +170,29 @@
         </footer>
         <script src="Bootstrap 5.1.3/js/bootstrap.bundle.min.js"></script>
         <script src="ContactUs.js"></script>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script>
+			//fungsi untuk membaca file json
+			$.getJSON("Data.json", function(res){
+			//nama variable
+			var items=[];
+			
+			//untuk looping sebanyak data json collection
+			$.each(res,function(index,val){
+			
+				//push = untuk menambahkan data pada variable items
+				items.push("<tr>")
+					items.push("<td id='"+index+"'>"+val.no +"</td>");
+					items.push("<td id='"+index+"'>"+val.judul +"</td>");
+					items.push("<td id='"+index+"'>"+val.tglupload +"</td>");
+					items.push("<td id='"+index+"'>"+val.uploader +"</td>");
+				items.push("</tr>")
+			});
+				$("<tbody>", {
+					"class" :"tbody-baru",
+					html:items.join("")
+				}).appendTo("table")	
+			});
+		</script>
     </body>
 </html>
